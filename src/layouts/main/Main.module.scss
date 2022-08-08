@@ -1,0 +1,68 @@
+.main {
+  &__bg {
+    background-color: var(--color-primary-black);
+    height: 60rem;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20.2rem;
+
+    @media only screen and (max-width: 23.4375em) {
+      margin-bottom: 39rem;
+    }
+
+    &--pattern {
+      position: absolute;
+      top: -4rem;
+      left: 33.6rem;
+      @media only screen and (max-width: 48em) {
+        top: -3rem;
+        left: 22.9rem;
+        margin-bottom: 18.3rem;
+      }
+      @media only screen and (max-width: 23.4375em) {
+        max-width: 28rem;
+        height: auto;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__mobile {
+    position: absolute;
+
+    width: 31.2rem;
+    height: 64.2rem;
+    left: 10.2rem;
+    top: -21.3rem;
+    @media only screen and (max-width: 48em) {
+      width: 27rem;
+      height: auto;
+      left: 6.4rem;
+      top: -13.8rem;
+    }
+    @media only screen and (max-width: 23.4375em) {
+      max-width: 20.9rem;
+      height: auto;
+      top: -10rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  &__card {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 56.9rem;
+    top: 9rem;
+    @media only screen and (max-width: 48em) {
+      top: 15rem;
+      left: 23.9rem;
+    }
+    @media only screen and (max-width: 23.4375em) {
+      top: 38rem;
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.card {
+  background-color: var(--color-primary-orange);
+  color: var(--color-primary-white);
+  width: 33.3rem;
+  padding: 5.8rem 5.9rem 4.8rem 5.4rem;
+  border-radius: 12px;
+
+  & > * {
+    margin-top: 0;
+  }
+  @media only screen and (max-width: 48em) {
+    max-width: 30.2rem;
+    padding: 4.8rem;
+  }
+
+  @media only screen and (max-width: 23.4375em) {
+    padding: 4.8rem 3.7rem;
+  }
+
+  &__title {
+    margin-bottom: 2.1rem;
+    @media only screen and (max-width: 48em) {
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  &__details {
+    margin-bottom: 4rem;
+  }
+  @media only screen and (max-width: 48em) {
+    margin-bottom: 3.6rem;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4.6rem;
+    @media only screen and (max-width: 48em) {
+      margin-bottom: 3.2rem;
+    }
+  }
+  &____price--money {
+    font-size: 6.5rem;
+    line-height: 5.2rem;
+    letter-spacing: 0;
+    margin-right: 1.6rem;
+  }
+  &__button {
+    display: grid;
+    row-gap: 1.6rem;
+  }
+}

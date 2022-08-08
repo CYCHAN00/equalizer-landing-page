@@ -1,0 +1,44 @@
+.header {
+  margin-bottom: 31.2rem;
+  & > * {
+    margin-top: 0;
+  }
+  @media only screen and (max-width: 48em) {
+    margin-bottom: 24.9rem;
+  }
+  @media only screen and (max-width: 23.4375em) {
+    margin-bottom: 16.6rem;
+  }
+
+  &_logo {
+    display: inline-block;
+    margin-bottom: 12.7rem;
+    @media only screen and (max-width: 48em) {
+      margin-bottom: 9.5rem;
+    }
+    @media only screen and (max-width: 23.4375em) {
+      margin-left: 2.4rem;
+      margin-bottom: 6.4rem;
+    }
+  }
+  &_title {
+    max-width: 101.5rem;
+    margin-bottom: 4rem;
+    @media only screen and (max-width: 48em) {
+      margin-bottom: 2.8rem;
+      max-width: 52rem;
+    }
+    @media only screen and (max-width: 23.4375em) {
+      margin: 0 auto 2rem auto;
+      max-width: 32.7rem;
+    }
+  }
+  &_content {
+    max-width: 82.5rem;
+    font-weight: 400;
+    @media only screen and (max-width: 23.4375em) {
+      max-width: 32.7rem;
+      margin: 0 auto 2rem auto;
+    }
+  }
+}

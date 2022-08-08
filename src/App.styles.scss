@@ -1,3 +1,5 @@
+@import url(./layouts/header/Header.module.scss);
+
 :root {
   --color-primary-blue: #66ecdc;
   --color-primary-orange: #fa7453;
@@ -6,7 +8,7 @@
   --color-primary-black: #191826;
 }
 
-*,
+$tablet: 48em;
 *::before,
 *::after {
   padding: 0;
@@ -19,26 +21,119 @@ html {
 }
 
 body {
-  max-width: 1440px;
   font-size: 2rem;
-  line-height: 3.4px;
+  line-height: 3.4rem;
+
   font-family: 'IBM Plex Sans', sans-serif;
-  position: relative;
+
+  background-color: var(--color-primary-white);
+
+  margin: 0 auto;
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 1.6rem;
+  }
+  @media only screen and (max-width: 23.4375em) {
+    line-height: 2.6rem;
+  }
 
   h1 {
     font-weight: 700;
     font-size: 8.8rem;
     line-height: 8.8rem;
     letter-spacing: -1px;
+    @media only screen and (max-width: $tablet) {
+      font-size: 6.4rem;
+      line-height: 6.4rem;
+    }
+
+    @media only screen and (max-width: 23.4375em) {
+      font-size: 4rem;
+      line-height: 4.8rem;
+    }
   }
 
   h2 {
     font-size: 4rem;
     line-height: 5.2rem;
+    @media only screen and (max-width: $tablet) {
+      font-size: 3.2rem;
+      line-height: 4rem;
+    }
   }
-}
 
-@mixin font-size-small {
-  font-size: 1.6rem;
-  line-height: 2.6rem;
+  .container {
+    margin: 0 auto;
+    height: auto;
+    max-width: 1440px;
+    position: relative;
+    overflow: hidden;
+
+    @media only screen and (max-width: $tablet) {
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./assets/bg-main-tablet.png');
+        background-repeat: no-repeat;
+        background-position: top -16.2rem left -38.4rem;
+        z-index: -2;
+      }
+    }
+    @media only screen and (max-width: 23.4375em) {
+      &::before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('./assets/bg-main-mobile.png');
+        background-repeat: no-repeat;
+        background-position: top -26.2rem right -21rem;
+        z-index: -2;
+      }
+    }
+  }
+  .bg {
+    &_image {
+      width: 161.3rem;
+      position: absolute;
+      top: -14.6em;
+      left: -11.2rem;
+      overflow: hidden;
+      z-index: -2;
+      @media only screen and (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    &_pattern-01 {
+      width: 31.2rem;
+      position: absolute;
+      right: 0;
+      top: -4rem;
+      z-index: -1;
+      @media only screen and (max-width: $tablet) {
+        width: 26.7rem;
+        left: 53.7rem;
+        top: -3.2rem;
+      }
+    }
+  }
+
+  .main-container {
+    margin: 6.2rem 16.5rem 9.1rem 16.5rem;
+    @media only screen and (max-width: $tablet) {
+      margin: 6.2rem 3.9rem 8.5rem 3.3rem;
+    }
+    @media only screen and (max-width: 23.4375em) {
+      margin: 4rem auto 8rem auto;
+    }
+  }
 }

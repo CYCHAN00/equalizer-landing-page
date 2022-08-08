@@ -1,0 +1,37 @@
+.btn {
+  display: inline-block;
+  border: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: -0.18px;
+  width: auto;
+  height: 6.1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &__icon {
+    height: 20px;
+    margin-right: 0.78rem;
+  }
+
+  &.ios-download {
+    color: var(--color-primary-white);
+    background-color: var(--color-primary-black);
+
+    &:active,
+    &:hover {
+      background-color: var(--color-primary-blue);
+    }
+  }
+  &.android-download {
+    background-color: var(--color-primary-white);
+    &:active,
+    &:hover {
+      background-color: var(--color-primary-yellow);
+    }
+  }
+}
