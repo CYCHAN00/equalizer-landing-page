@@ -1,0 +1,44 @@
+:root {
+  --color-primary-blue: #66ecdc;
+  --color-primary-orange: #fa7453;
+  --color-primary-yellow: #ffb964;
+  --color-primary-white: #fcfaf9;
+  --color-primary-black: #191826;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 1440px;
+  font-size: 2rem;
+  line-height: 3.4px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  position: relative;
+
+  h1 {
+    font-weight: 700;
+    font-size: 8.8rem;
+    line-height: 8.8rem;
+    letter-spacing: -1px;
+  }
+
+  h2 {
+    font-size: 4rem;
+    line-height: 5.2rem;
+  }
+}
+
+@mixin font-size-small {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+}
